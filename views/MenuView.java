@@ -6,7 +6,8 @@ import java.awt.*;
 public class MenuView extends JFrame {
     
     GridLayout gridButtons = new GridLayout(2, 2, 12, 12);
-    private JLabel bgLabel;
+    private JPanel headerPanel;
+    private JLabel headerLabel;
     private JFrame bgFrame;
     private JButton foodButton;
     private JButton waterButton;
@@ -18,18 +19,25 @@ public class MenuView extends JFrame {
         bgFrame.setResizable(false);
         bgFrame.setLayout(gridButtons);
         
-        bgLabel = new JLabel();
-        bgLabel.setIcon(new ImageIcon(getClass().getResource("../assets/Background.png")));
+        headerPanel = new JPanel();
+        headerPanel.setSize(500, 100);
+
+        headerLabel = new JLabel();
+        headerLabel.setSize(500, 100);
+        headerLabel.setMaximumSize(new java.awt.Dimension(500, 100));
+        headerLabel.setIcon(new ImageIcon("assets/headerBackground.png"));
+
+        headerPanel.add(headerLabel);
         
-        foodButton = new JButton(new ImageIcon(getClass().getResource("../assets/FoodsButton.png")));
+        foodButton = new JButton(new ImageIcon("assets/FoodsButton.png"));
         foodButton.setSize(228, 228);
         
         /*waterButton = new JButton(new ImageIcon(getClass().getResource("../assets/WaterButton.png")));
         waterButton.setSize(228, 228);*/
 
-        bgFrame.getContentPane().add(foodButton);
         //bgFrame.getContentPane().add(waterButton);
-        bgFrame.getContentPane().add(bgLabel);
+        bgFrame.getContentPane().add(headerPanel);
+        bgFrame.getContentPane().add(foodButton);
         bgFrame.setSize(500, 639);
         bgFrame.setVisible(true);
 
