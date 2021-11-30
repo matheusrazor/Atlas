@@ -1,20 +1,20 @@
 package models;
 
 public class Foods {
-    private static String foodName;
-    private static int foodQuantity; /* Portion quantity as shown in the nutritional table you have access */
-    private static double foodCalories; /* All information as shown in the nutritional table you have access */
-    private static double foodProteins;
-    private static double foodCarbs;
-    private static double foodFats;
+    private String foodName;
+    private int foodQuantity; /* Portion quantity as shown in the nutritional table you have access */
+    private double foodCalories; /* All information as shown in the nutritional table you have access */
+    private double foodProteins;
+    private double foodCarbs;
+    private double foodFats;
 
     private Foods(String foodName, int foodQuantity, double foodCalories, double foodProteins, double foodCarbs, double foodFats) {
-        Foods.foodName = foodName;
-        Foods.foodQuantity = foodQuantity;
-        Foods.foodCalories = foodCalories;
-        Foods.foodProteins = foodProteins;
-        Foods.foodCarbs = foodCarbs;
-        Foods.foodFats = foodFats;
+        this.foodName = foodName;
+        this.foodQuantity = foodQuantity;
+        this.foodCalories = foodCalories;
+        this.foodProteins = foodProteins;
+        this.foodCarbs = foodCarbs;
+        this.foodFats = foodFats;
     }
 
     public String getFoodName() {
@@ -22,7 +22,7 @@ public class Foods {
     }
 
     public void setFoodName(String foodName) {
-        Foods.foodName = foodName;
+        this.foodName = foodName;
     }
 
     public int getFoodQuantity() {
@@ -30,7 +30,7 @@ public class Foods {
     }
 
     public void setFoodQuantity(int foodQuantity) {
-        Foods.foodQuantity = foodQuantity;
+        this.foodQuantity = foodQuantity;
     }
     
     public double getFoodCalories() {
@@ -38,7 +38,7 @@ public class Foods {
     }
 
     public void setFoodCalories(double foodCalories) {
-        Foods.foodCalories = foodCalories;
+        this.foodCalories = foodCalories;
     }
     
     public double getFoodProteins() {
@@ -46,7 +46,7 @@ public class Foods {
     }
 
     public void setFoodProteins(double foodProteins) {
-        Foods.foodProteins = foodProteins;
+        this.foodProteins = foodProteins;
     }
     
     public double getFoodCarbs() {
@@ -54,7 +54,7 @@ public class Foods {
     }
 
     public void setFoodCarbs(double foodCarbs) {
-        Foods.foodCarbs = foodCarbs;
+        this.foodCarbs = foodCarbs;
     }
     
     public double getFoodFats() {
@@ -62,7 +62,7 @@ public class Foods {
     }
 
     public void setFoodFats(double foodFats) {
-        Foods.foodFats = foodFats;
+        this.foodFats = foodFats;
     }
     
 }

@@ -1,44 +1,45 @@
 package views;
 
-import javax.swing.*;
-import java.awt.*;
-
-public class MenuView extends JFrame {
+public class MenuView extends javax.swing.JFrame {
     
-    GridLayout gridButtons = new GridLayout(2, 2, 12, 12);
-    private JPanel headerPanel;
-    private JLabel headerLabel;
-    private JFrame bgFrame;
-    private JButton foodButton;
-    private JButton waterButton;
+    java.awt.GridLayout gridButtons = new java.awt.GridLayout(2, 2, 12, 12);
+    private javax.swing.JPanel headerPanel, bodyPanel;
+    private javax.swing.JLabel headerLabel;
+    private javax.swing.JFrame bgFrame;
+    private javax.swing.JButton foodButton;
+    private javax.swing.JButton goalsButton;
 
     public MenuView() {
 
-        bgFrame = new JFrame("Food Atlas");
-        bgFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        bgFrame = new javax.swing.JFrame("Food Atlas");
+        bgFrame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         bgFrame.setResizable(false);
-        bgFrame.setLayout(gridButtons);
+        bgFrame.setMaximumSize(new java.awt.Dimension(516, 600));
+        bgFrame.setPreferredSize(new java.awt.Dimension(516, 600));
         
-        headerPanel = new JPanel();
-        headerPanel.setSize(500, 100);
-
-        headerLabel = new JLabel();
-        headerLabel.setSize(500, 100);
+        headerPanel = new javax.swing.JPanel();
+        headerPanel.setSize(516, 100);
+        
+        headerLabel = new javax.swing.JLabel();
+        headerLabel.setSize(516, 100);
         headerLabel.setMaximumSize(new java.awt.Dimension(500, 100));
-        headerLabel.setIcon(new ImageIcon("assets/headerBackground.png"));
-
+        headerLabel.setIcon(new javax.swing.ImageIcon("assets/headerBackground.png"));
+        
         headerPanel.add(headerLabel);
         
-        foodButton = new JButton(new ImageIcon("assets/FoodsButton.png"));
-        foodButton.setSize(228, 228);
-        
-        /*waterButton = new JButton(new ImageIcon(getClass().getResource("../assets/WaterButton.png")));
-        waterButton.setSize(228, 228);*/
+        bodyPanel.setLayout(gridButtons);
 
-        //bgFrame.getContentPane().add(waterButton);
+        foodButton = new javax.swing.JButton(new javax.swing.ImageIcon("assets/FoodsButton.png"));
+        foodButton.setSize(220, 220);
+        
+        goalsButton = new javax.swing.JButton(new javax.swing.ImageIcon("assets/WaterButton.png"));
+        goalsButton.setSize(220, 220);
+        
+        bodyPanel.add(foodButton);
+        bodyPanel.add(goalsButton);
+
         bgFrame.getContentPane().add(headerPanel);
-        bgFrame.getContentPane().add(foodButton);
-        bgFrame.setSize(500, 639);
+        bgFrame.getContentPane().add(bodyPanel);
         bgFrame.setVisible(true);
 
     }

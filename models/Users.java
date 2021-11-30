@@ -1,16 +1,16 @@
 package models;
 
 public class Users {
-    private static String userName; /* Name of the user */
-    private static double userWeight; /* Weight of the user in kilograms */
-    private static double userHeight; /* Height of the user in centimeters */
-    private static int userActivity; /* From 0-4, how active the user is, 0 being sedentary and 4 being very active */
+    private String userName; /* Name of the user */
+    private double userWeight; /* Weight of the user in kilograms */
+    private double userHeight; /* Height of the user in centimeters */
+    private int userActivity; /* From 0-4, how active the user is, 0 being sedentary and 4 being very active */
 
     private Users(String userName, double userWeight, double userHeight, int userActivity) {
-        Users.userName = userName;
-        Users.userWeight = userWeight;
-        Users.userHeight = userHeight;
-        Users.userActivity = userActivity;
+        this.userName = userName;
+        this.userWeight = userWeight;
+        this.userHeight = userHeight;
+        this.userActivity = userActivity;
     }
 
     public String getUserName() {
@@ -18,7 +18,7 @@ public class Users {
     }
 
     public void setUserName(String userName) {
-        Users.userName = userName;
+        this.userName = userName;
     }
 
     public double getUserWeight() {
@@ -26,7 +26,7 @@ public class Users {
     }
 
     public void setUserWeight(double userWeight) {
-        Users.userWeight = userWeight;
+        this.userWeight = userWeight;
     }
     
     public double getUserHeight() {
@@ -34,7 +34,7 @@ public class Users {
     }
 
     public void setUserHeight(double userHeight) {
-        Users.userHeight = userHeight;
+        this.userHeight = userHeight;
     }
     
     public int getUserActivity() {
@@ -42,7 +42,7 @@ public class Users {
     }
 
     public void setUserActivity(int userActivity) {
-        Users.userActivity = userActivity;
+        this.userActivity = userActivity;
     }
     
 }
