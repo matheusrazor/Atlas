@@ -6,7 +6,7 @@ public class Users {
     private double userHeight; /* Height of the user in centimeters */
     private int userActivity; /* From 0-4, how active the user is, 0 being sedentary and 4 being very active */
 
-    private Users(String userName, double userWeight, double userHeight, int userActivity) {
+    public Users(String userName, double userWeight, double userHeight, int userActivity) {
         this.userName = userName;
         this.userWeight = userWeight;
         this.userHeight = userHeight;

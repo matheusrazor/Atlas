@@ -8,7 +8,7 @@ public class Foods {
     private double foodCarbs;
     private double foodFats;
 
-    private Foods(String foodName, int foodQuantity, double foodCalories, double foodProteins, double foodCarbs, double foodFats) {
+    public Foods(String foodName, int foodQuantity, double foodCalories, double foodProteins, double foodCarbs, double foodFats) {
         this.foodName = foodName;
         this.foodQuantity = foodQuantity;
         this.foodCalories = foodCalories;
