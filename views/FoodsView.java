@@ -17,6 +17,7 @@ public class FoodsView {
     private JButton addButton;
     private JButton cancelButton;
     private JTextField foodNameField;
+    private JTextField foodQuantityField;
     private JTextField foodCalorieField;
     private JTextField foodProteinField;
     private JTextField foodCarbField;
@@ -28,6 +29,7 @@ public class FoodsView {
         frame.setTitle("Foods");
         
         foodNameField = new JTextField("Food name");
+        foodQuantityField = new JTextField("Quantity");
         foodCalorieField = new JTextField("Calories");
         foodProteinField = new JTextField("Proteins");
         foodCarbField = new JTextField("Carbs");
@@ -35,6 +37,18 @@ public class FoodsView {
         
         addButton = new JButton("Add");
         cancelButton = new JButton("Cancel");
+
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                /*Controller gets all the text from the text fields and creates a new object*/
+            }
+        });
+
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                /*Go back to the menu view*/
+            }
+        });
         
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
@@ -43,6 +57,7 @@ public class FoodsView {
         panel.add(addButton);
         panel.add(cancelButton);
         panel.add(foodNameField);
+        panel.add(foodQuantityField);
         panel.add(foodCalorieField);
         panel.add(foodProteinField);
         panel.add(foodCarbField);
@@ -53,6 +68,32 @@ public class FoodsView {
         frame.pack();
         frame.setVisible(true);
     }
+
+
+    public String getFoodNameField() {
+        return foodNameField.getText();
+    }
+
+    public int getfoodQuantityField() {
+        return Integer.parseInt(foodQuantityField.getText());
+    }
+
+    public double getFoodCalorieField() {
+        return Double.parseDouble(foodCalorieField.getText());
+    }
+  
+    public double getFoodProteinField() {
+        return Double.parseDouble(foodProteinField.getText());
+    }
+
+    public double getFoodCarbField() {
+        return Double.parseDouble(foodCarbField.getText());
+    }
+
+    public double getFoodFatField() {
+        return Double.parseDouble(foodFatField.getText());
+    }
+
 
     public static void main(String[] args) {
         new FoodsView();

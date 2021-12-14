@@ -36,6 +36,18 @@ public class GoalsView {
         addButton = new JButton("Add");
         cancelButton = new JButton("Cancel");
         
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                /*Controller gets all the text from the text fields and creates a new object*/
+            }
+        });
+
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                /*Go back to the menu view*/
+            }
+        });
+        
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
         panel.setLayout(new GridLayout(5, 2));
