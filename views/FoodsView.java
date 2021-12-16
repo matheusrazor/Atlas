@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.plaf.ColorUIResource;
 
+import controllers.FoodsController;
+
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 
@@ -41,6 +43,9 @@ public class FoodsView {
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 /*Controller gets all the text from the text fields and creates a new object*/
+                // Testing the controller
+                // TODO change the calling
+                new FoodsController();
             }
         });
 
