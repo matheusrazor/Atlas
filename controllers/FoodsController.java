@@ -18,6 +18,7 @@ public class FoodsController {
         // Using the builder only for testing right now with main and view
         instanceMenu();
         newFood();
+        // Maybe encapsulate it to the view. the Controller only works in the newFood method, and its called when the add button is pressed from within the view
     }
 
     public void instanceMenu() {
@@ -38,6 +39,10 @@ public class FoodsController {
         System.out.println(name + "\n" + quantity + "\n" + calories);
 
         return 1;
+    }
+
+    public Foods getNewFood() {
+        return newFood;
     }
 
 }
