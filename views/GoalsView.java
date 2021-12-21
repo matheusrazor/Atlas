@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.plaf.ColorUIResource;
 
+import controllers.GoalsController;
+
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 
@@ -39,6 +41,8 @@ public class GoalsView {
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 /*Controller gets all the text from the text fields and creates a new object*/
+                frame.dispose();
+                new GoalsController();
             }
         });
 
@@ -64,6 +68,26 @@ public class GoalsView {
 
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public int getGoalWaterField() {
+        return Integer.parseInt(goalWaterField.getText());
+    }
+
+    public int getGoalCalorieField() {
+        return Integer.parseInt(goalCalorieField.getText());
+    }
+
+    public int getGoalProteinField() {
+        return Integer.parseInt(goalProteinField.getText());
+    }
+
+    public int getGoalCarbField() {
+        return Integer.parseInt(goalCarbField.getText());
+    }
+    
+    public int getGoalFatField() {
+        return Integer.parseInt(goalFatField.getText());
     }
 
     public static void main(String[] args) {

@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.plaf.ColorUIResource;
 
+import controllers.UsersController;
+
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 
@@ -37,6 +39,8 @@ public class UsersView {
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 /*Controller gets all the text from the text fields and creates a new object*/
+                frame.dispose();
+                new UsersController();
             }
         });
 
@@ -61,6 +65,22 @@ public class UsersView {
 
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public String getUserNameField() {
+        return userNameField.getText();
+    }
+
+    public double getUserHeightField() {
+        return Double.parseDouble(userHeightField.getText());
+    }
+  
+    public double getUserWeightField() {
+        return Double.parseDouble(userWeightField.getText());
+    }
+
+    public int getUserActivityField() {
+        return Integer.parseInt(userActivityField.getText());
     }
 
     public static void main(String[] args) {

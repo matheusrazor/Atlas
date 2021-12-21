@@ -45,6 +45,7 @@ public class FoodsView {
                 /*Controller gets all the text from the text fields and creates a new object*/
                 // Testing the controller
                 // TODO change the calling
+                frame.dispose();
                 new FoodsController();
             }
         });
