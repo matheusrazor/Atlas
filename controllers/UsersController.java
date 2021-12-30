@@ -5,7 +5,7 @@ import views.UsersView;
 
 public class UsersController {
     
-    private Users newUser;
+    private static Users newUser;
     private String name;
     private double height;
     private double weight;
@@ -30,12 +30,12 @@ public class UsersController {
         this.weight = instanceMenu.getUserWeightField();
         this.activity = instanceMenu.getUserActivityField();
 
-        this.newUser = new Users(name, height, weight, activity);
+        UsersController.newUser = new Users(name, height, weight, activity);
 
         return 1;
     }
 
-    public Users getNewUser() {
+    public static Users getNewUser() {
         return newUser;
     }
     

@@ -42,6 +42,12 @@ public class FileHandler {
         switch (fileSwitch) {
             case 1:
                 // users
+                writerUsers.write(usersInfoGetter(1));
+                writerUsers.write(usersInfoGetter(2));
+                writerUsers.write(usersInfoGetter(3));
+                writerUsers.write(usersInfoGetter(4));
+                writerUsers.close();
+                System.out.println("Successfully wrote to the usersFile.");
                 break;
             case 2:
                 // foods
@@ -62,12 +68,29 @@ public class FileHandler {
      * the method infoDiver searches for the needed infos in the files
      * * infoDiver can be run multiple times, from the login page to everytime someone consults a food or tries to write a new one, based on whether the specific object exists,
      * * the infoDiver can determine which method to call, Getter or Poster
-     * then theres the infoPoster methods that take infos from the files and displays it.
-    public Users usersInfoGetter() {
+     * then theres the infoPoster methods that takes infos from the files and displays it.
+     */
+    public String usersInfoGetter(int t) {
+        // 1 -> userName, 2 -> userHeight, 3 -> userWeight, 4 -> userActivity
         Users output;
-        return output;
+        output = UsersController.getNewUser();
+        String aux;
+        aux = " "; // For now I'll leave it empty, but in the future its gonna contain the id of each user, food or goal
+        switch (t) {
+            case 1:
+                return aux + output.getUserName();
+            case 2:
+                return aux + Double.toString(output.getUserHeight());
+            case 3:
+                return aux + Double.toString(output.getUserWeight());
+            case 4:
+                return aux + Integer.toString(output.getUserActivity());
+            default:
+                System.out.println("Error in usersInfoGetter");
+        }
+        return null;
     }
-
+    /*
     public Foods foodsInfoGetter() {
         Foods output;
         return output;
